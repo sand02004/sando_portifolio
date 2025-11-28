@@ -1,35 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sandrine — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header>
-    <nav>
-      <h1>Umugwaneza Sandrine</h1>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- About Me Section -->
-  <section id="about">
-    <div class="about-container">
-      <img src="profile.jpg" alt="My Photo">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>Hello! I’m Umugwaneza Sandrine, a passionate web designer and developer. I love turning designs into real websites.</p>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">S</div>
+        <div class="brand-text">
+          <div class="name">Sandrine</div>
+          <div class="role muted">Web developer &amp; designer</div>
+        </div>
       </div>
-    </div>
-  </section>
 
+      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-cta" href="#" aria-label="Resume">Resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero / Intro -->
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-left">
+          <div class="intro-card">
+            <h1 id="hero-title">Hi — I'm Sandrine</h1>
+            <p class="lead">I build clean, responsive websites and interactive UI experiences.</p>
+
+            <div class="actions">
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn" href="#contact">Get in touch</a>
+            </div>
+
+            <div class="featured" aria-hidden="false">
+              <h3 class="featured-title">Featured project — Web Portfolio</h3>
+              <p class="featured-desc muted">A responsive portfolio built from a Figma template and implemented with HTML &amp; CSS.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-right profile" aria-labelledby="profile-name">
+          <div class="profile-image" role="img" aria-label="Profile image placeholder">Profile image</div>
+          <h3 id="profile-name">Sandrine (Lucky)</h3>
+          <div class="muted">Rwanda • UI / Frontend</div>
+
+          <div class="skill-tags" aria-hidden="true">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Figma</span>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="projects-section" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+        <div class="projects-grid" role="list">
+          <article class="project" role="listitem">
+            <div class="project-thumb" aria-hidden="true">Portfolio</div>
+            <h4 class="project-title">Personal Portfolio</h4>
+            <p class="muted">Figma → HTML/CSS implementation showing projects, skills and contact.</p>
+          </article>
+
+          <article class="project" role="listitem">
+            <div class="project-thumb" aria-hidden="true">smartQ</div>
+            <h4 class="project-title">smartQ — Queue System</h4>
+            <p class="muted">A simple queue/number system for kiosks and small businesses.</p>
+          </article>
+
+          <article class="project" role="listitem">
+            <div class="project-thumb" aria-hidden="true">Web App</div>
+            <h4 class="project-title">Web Development &amp; Design</h4>
+            <p class="muted">Design systems, responsive pages, and accessible UI components.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="about-section" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <div class="about-card">
+          <p class="muted">
+            I am a web developer &amp; designer learning frontend best practices while implementing Figma designs.
+            I enjoy transforming ideas into clean, usable interfaces and teaching ICT to younger students.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-card">
+          <p class="muted">Email: <a href="mailto:you@example.com">you@example.com</a></p>
+          <form class="contact-form" action="#" method="post" novalidate>
+            <label class="sr-only" for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            <label class="sr-only" for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">© 2025 Sandrine — Built with </div>
+    </footer>
+  </div>
 </body>
 </html>

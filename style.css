@@ -1,70 +1,255 @@
-/* Reset default styles */
+/* ---------- GLOBAL ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-/* Header */
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
+body {
+  font-family: "Inter", sans-serif;
+  background: #fafafa;
+  color: #1a1a1a;
+  line-height: 1.6;
 }
 
-nav {
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.muted {
+  color: #666;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+/* ---------- HEADER ---------- */
+.site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  margin: 0 auto;
+  padding: 18px 0;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* About Section */
-#about {
-  padding: 60px 20px;
-  background-color: #f4f4f4;
-}
-
-.about-container {
+.brand {
   display: flex;
   align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
+  gap: 12px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.brand-text .name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.site-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.nav-cta {
+  padding: 8px 16px;
+  background: black;
+  color: white;
+  border-radius: 6px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
   gap: 40px;
 }
 
-.about-container img {
-  width: 250px;
-  border-radius: 50%;
+.hero-left {
+  flex: 1.4;
 }
 
-.about-text h2 {
-  font-size: 2rem;
+.intro-card h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.lead {
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  padding: 10px 22px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: black;
+  color: white;
+  border: none;
+}
+
+.featured {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+/* ---------- PROFILE SIDE ---------- */
+.hero-right {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  background: #ddd;
+  border-radius: 12px;
+  margin: auto;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-tags {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tag {
+  padding: 6px 12px;
+  background: black;
+  color: white;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* ---------- PROJECTS ---------- */
+.projects-section {
+  margin-top: 80px;
+}
+
+.projects-section h2 {
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.project {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.project-thumb {
+  height: 120px;
+  background: #ccc;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* ---------- ABOUT ---------- */
+.about-section {
+  margin-top: 80px;
+}
+
+.about-card {
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 12px;
+}
+
+/* ---------- CONTACT ---------- */
+.contact-section {
+  margin-top: 80px;
+}
+
+.contact-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.contact-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 15px;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  margin-top: 100px;
+  padding: 30px 0;
+  text-align: center;
+  color: #666;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .site-header {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
