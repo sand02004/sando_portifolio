@@ -2,120 +2,225 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sandrine — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Sandrine</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <div class="wrap">
-    <header class="site-header">
-      <div class="brand">
-        <div class="avatar" aria-hidden="true">S</div>
-        <div class="brand-text">
-          <div class="name">Sandrine</div>
-          <div class="role muted">Web developer &amp; designer</div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">SANDRINE</div>
+
+      <!-- NAVIGATION -->
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Service</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+
+          <!-- BLOG MOVED ABOVE CONTACT -->
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="menuBtn" class="menu-btn">☰</button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Welcome To My Blog</h1>
+          <p class="lead">
+            Sharing ideas, projects and insights that connect technology, design and human impact.
+          </p>
+          <a class="btn" href="#portfolio">View Portfolio</a>
+        </div>
+
+        <div class="hero-image">
+          <div class="portrait-frame">
+            <img src="images/portrait.png" alt="Portrait">
+          </div>
         </div>
       </div>
+    </section>
 
-      <nav class="site-nav" role="navigation" aria-label="Main navigation">
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#contact">Contact</a>
-        <a class="nav-cta" href="#" aria-label="Resume">Resume</a>
-      </nav>
-    </header>
-
-    <main>
-      <!-- Hero / Intro -->
-      <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="hero-left">
-          <div class="intro-card">
-            <h1 id="hero-title">Hi — I'm Sandrine</h1>
-            <p class="lead">I build clean, responsive websites and interactive UI experiences.</p>
-
-            <div class="actions">
-              <a class="btn btn-primary" href="#projects">View Projects</a>
-              <a class="btn" href="#contact">Get in touch</a>
-            </div>
-
-            <div class="featured" aria-hidden="false">
-              <h3 class="featured-title">Featured project — Web Portfolio</h3>
-              <p class="featured-desc muted">A responsive portfolio built from a Figma template and implemented with HTML &amp; CSS.</p>
-            </div>
-          </div>
-        </div>
-
-        <aside class="hero-right profile" aria-labelledby="profile-name">
-          <div class="profile-image" role="img" aria-label="Profile image placeholder">Profile image</div>
-          <h3 id="profile-name">Sandrine (Lucky)</h3>
-          <div class="muted">Rwanda • UI / Frontend</div>
-
-          <div class="skill-tags" aria-hidden="true">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Figma</span>
-          </div>
-        </aside>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects" class="projects-section" aria-labelledby="projects-title">
-        <h2 id="projects-title">Projects</h2>
-        <div class="projects-grid" role="list">
-          <article class="project" role="listitem">
-            <div class="project-thumb" aria-hidden="true">Portfolio</div>
-            <h4 class="project-title">Personal Portfolio</h4>
-            <p class="muted">Figma → HTML/CSS implementation showing projects, skills and contact.</p>
-          </article>
-
-          <article class="project" role="listitem">
-            <div class="project-thumb" aria-hidden="true">smartQ</div>
-            <h4 class="project-title">smartQ — Queue System</h4>
-            <p class="muted">A simple queue/number system for kiosks and small businesses.</p>
-          </article>
-
-          <article class="project" role="listitem">
-            <div class="project-thumb" aria-hidden="true">Web App</div>
-            <h4 class="project-title">Web Development &amp; Design</h4>
-            <p class="muted">Design systems, responsive pages, and accessible UI components.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- About -->
-      <section id="about" class="about-section" aria-labelledby="about-title">
-        <h2 id="about-title">About</h2>
-        <div class="about-card">
-          <p class="muted">
-            I am a web developer &amp; designer learning frontend best practices while implementing Figma designs.
-            I enjoy transforming ideas into clean, usable interfaces and teaching ICT to younger students.
+    <!-- ABOUT -->
+    <section id="about" class="section dark">
+      <div class="container two-col">
+        <div>
+          <h2>I'm Mugwaneza Sandrine</h2>
+          <p>
+            I craft delightful user experiences that blend design, technology and practical thinking.
+            I build interfaces that solve problems, look good and feel fast.
           </p>
+          <p>Skills: UI/UX, Web Development, Product Design, Project Management.</p>
         </div>
-      </section>
 
-      <!-- Contact -->
-      <section id="contact" class="contact-section" aria-labelledby="contact-title">
-        <h2 id="contact-title">Contact</h2>
-        <div class="contact-card">
-          <p class="muted">Email: <a href="mailto:you@example.com">you@example.com</a></p>
-          <form class="contact-form" action="#" method="post" novalidate>
-            <label class="sr-only" for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required>
-            <label class="sr-only" for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required>
-            <label class="sr-only" for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
-            <button class="btn btn-primary" type="submit">Send message</button>
-          </form>
+        <div class="card about-card">
+          <h3>Contact Me</h3>
+          <p>Available for freelance and full-time roles.</p>
+          <a class="btn ghost" href="#contact">Get in Touch</a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="site-footer">
-      <div class="footer-inner">© 2025 Sandrine — Built with </div>
-    </footer>
-  </div>
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+
+        <div class="cards-grid">
+          <article class="service-card">
+            <div class="icon">🖥️</div>
+            <h4>Web Development & Design</h4>
+            <p>Responsive websites, progressive web apps and clean UI implementations.</p>
+            <button class="btn small view-more">View More</button>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">📱</div>
+            <h4>Smart App Design</h4>
+            <p>User-centered prototypes and handoff-ready designs for developers.</p>
+            <button class="btn small view-more">View More</button>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">🤝</div>
+            <h4>Community & Portfolio Building</h4>
+            <p>Support to showcase projects and engage an audience.</p>
+            <button class="btn small view-more">View More</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section dark">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+
+        <div class="portfolio-grid">
+          <figure class="portfolio-item">
+            <img src="images/project1.png" alt="Smart Queue">
+            <figcaption>
+              <h4>Smart Que System</h4>
+              <p>Digital queue management for businesses and hospitals.</p>
+              <a class="btn small ghost" href="#">HOME</a>
+            </figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <img src="images/project2.png" alt="Maternity App">
+            <figcaption>
+              <h4>Maternity Health App</h4>
+              <p>Care and appointment tracking for expecting mothers.</p>
+              <a class="btn small ghost" href="#">HOME</a>
+            </figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <img src="images/project3.png" alt="Community Platform">
+            <figcaption>
+              <h4>Community Platform</h4>
+              <p>Tools to organize volunteer programs and events.</p>
+              <a class="btn small ghost" href="#">HOME</a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-row">
+          <div class="exp-card">
+            <h4>Senior Designer</h4>
+            <p>Led product design for a healthcare platform (2022–2024)</p>
+          </div>
+
+          <div class="exp-card">
+            <h4>Product Creator</h4>
+            <p>Launched Smart Que & Maternity App projects (2020–2022)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG (MOVED BEFORE CONTACT) -->
+    <section id="blog" class="section">
+      <div class="container">
+        <h2 class="section-title">Blog</h2>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <img src="images/blog1.jpg" alt="Blog 1">
+            <h4>How we designed Smart Que</h4>
+            <p>Short snippet describing the design process and impact.</p>
+            <a class="btn small" href="#">Read</a>
+          </article>
+
+          <article class="blog-card">
+            <img src="images/blog2.jpg" alt="Blog 2">
+            <h4>Designing for Maternal Care</h4>
+            <p>Thoughts on accessibility and trust in health apps.</p>
+            <a class="btn small" href="#">Read</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (NOW LAST SECTION) -->
+    <section id="contact" class="section dark">
+      <div class="container two-col">
+        <div class="contact-info">
+          <h2>Contact</h2>
+          <p>Send a message and I will get back to you.</p>
+          <p><strong>Email:</strong> sandrine@example.com</p>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <label>
+            <span>Name</span>
+            <input name="name" required />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" required />
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+
+          <button class="btn" type="submit">Send Message</button>
+          <div id="formMsg" class="form-msg"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer dark">
+    <div class="container">
+      <p>© 2025 Sandrine Portfolio — built as a demo</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
